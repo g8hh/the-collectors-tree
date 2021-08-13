@@ -39,7 +39,7 @@ function grab(id, crit, explode) {
   if (player.p.grid[id].lt(1)) return
   let chance = Math.random()*100
   let chance2 = Math.random()*100
-  if (player.rgb.best.lt(1) && player.p.buyables[11].gte(1)) {
+  if (player.rgb.best.lt(1) && player.p.buyables[23].gte(1)) {
     player.rgb.unlocked = true
   }
   if (chance < tmp.p.buyables[21].effect && crit == true) {
