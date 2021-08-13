@@ -340,7 +340,7 @@ addLayer("p", {
     prestigePointMult() {
       let effect = new Decimal(1)
       effect = effect.mul(tmp[this.layer].buyables[12].effect)
-      if (player.d.buyables[12].gte(1)) effect = effect.mul(tmp.d.buyables[12].effect.div(100))
+      if (player.d.buyables[12].gte(1)) effect = effect.mul(tmp.d.buyables[12].effect.div(100).add(1))
       return effect
     },
     harvestRate() {
