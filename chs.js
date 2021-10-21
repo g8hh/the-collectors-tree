@@ -52,6 +52,7 @@ var cnItems = {
     "Welcome to Rainbow Haven, where all the rainbows are!": "欢迎来到彩虹天堂，这里有彩虹！",
     "Solar Fusion": "太阳能聚变",
     "Ultra Boost": "终极提升",
+    "Congratulations! You have reached the end and wasted your time.": "恭喜！ 你已经走到了尽头，浪费了你的时间。",
     "": "",
     "": "",
     "": "",
