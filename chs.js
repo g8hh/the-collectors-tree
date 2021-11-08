@@ -256,6 +256,7 @@ var cnExcludePostfix = [
 //原样输出的字段：(.+)
 //换行加空格：\n(.+)
 var cnRegReplace = new Map([
+    [/^([\d\.]+)h ([\d\.]+)m ([\d\.]+)s$/, '$1小时 $2分钟 $3秒'],
     [/^You have (.+) points$/, '你有 $1 点数'],
     [/^Next at (.+) points$/, '下一个在 $1 点数'],
     [/^gains a (.+)x multiplier.$/, '获得 $1x 乘数。'],
@@ -269,7 +270,7 @@ var cnRegReplace = new Map([
     [/^Cost: (.+) prestige points\n(.+)Amount: (.+)\n(.+)Squares give (.+)x more prestige points.$/, '成本：$1 声望点\n$2数量：$3\n$4方块提供 $5x 的声望点数。'],
     [/^Cost: (.+) dark points\n(.+)Amount: (.+)\n(.+)Dark points increase prestige point gain by (.+).$/, '成本：$1 黑暗点\n$2数量：$3\n$4黑暗点增加声望点增益 $5。'],
     [/^Cost: (.+) dark points\n(.+)Amount: (.+)\n(.+)Dark points are produced (.+)x faster.$/, '成本：$1 黑暗点\n$2数量：$3\n$4黑暗点的生成速度提高了 $5x。'],
-    [/^Cost: (.+) dark points\n(.+)Amount: (.+)\n(.+)You gain 0.00 dark points per second while online.$/, '成本：$1 黑暗点\n$2数量：$3\n$4您在线时每秒获得 $5 黑暗点。'],
+    [/^Cost: (.+) dark points\n(.+)Amount: (.+)\n(.+)You gain (.+) dark points per second while online.$/, '成本：$1 黑暗点\n$2数量：$3\n$4您在线时每秒获得 $5 黑暗点。'],
     [/^Cost: (.+) RGB points\n(.+)Amount: (.+)\n(.+)Produces (.+) RGB points per second, up to (.+) RGB points.$/, '成本：$1 RGB点\n$2数量：$3\n$4每秒产生 $5 个 RGB 点，最多 $6 个 RGB 点。'],
     [/^Cost: (.+) RGB points\n(.+)Amount: (.+)\n(.+)Gives a (.+) chance to add (.+) tier to a square that has been affected by$/, '成本：$1 RGB点\n$2数量：$3\n$4有 $5 的几率将受到影响的方格增加 $6 层'],
     [/^Cost: (.+) RGB points\n(.+)Amount: ([\d\.]+) \/ ([\d\.]+)$/, '成本：$1 RGB点\n$2数量：$3\/$4'],
@@ -278,6 +279,7 @@ var cnRegReplace = new Map([
 	[/^([\d\.]+)\/sec$/, '$1\/秒'],
 	[/^([\d\.]+) RGB points$/, '$1 RGB点'],
 	[/^([\d\.]+) dark points$/, '$1 黑暗点'],
+	[/^([\d\.,]+) dark points$/, '$1 黑暗点'],
 	[/^([\d\.]+) prestige points$/, '$1 声望点'],
 	[/^([\d\.,]+) prestige points$/, '$1 声望点'],
 	[/^([\d\.]+)e([\d\.,]+) prestige points$/, '$1 声望点'],
